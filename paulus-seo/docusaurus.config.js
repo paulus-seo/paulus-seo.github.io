@@ -30,6 +30,8 @@ const config = {
   organizationName: 'paulus-seo', // Usually your GitHub org/user name.
   projectName: 'paulus-seo.github.io', // Usually your repo name.
 
+  deploymentBranch: 'main',
+
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
