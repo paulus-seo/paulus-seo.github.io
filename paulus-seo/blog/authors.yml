@@ -1,14 +1,12 @@
-yangshun:
-  name: Yangshun Tay
-  title: Ex-Meta Staff Engineer, Co-founder GreatFrontEnd
-  url: https://linkedin.com/in/yangshun
-  image_url: https://github.com/yangshun.png
+paulus-seo:
+  name: Paul Seo
+  title: Robotics Software Engineer, Hyundai-WIA
+  url: http://linkedin.com/in/paulusseo/
+  image_url: https://github.com/paulus-seo.png
   page: true
   socials:
-    x: yangshunz
-    linkedin: yangshun
-    github: yangshun
-    newsletter: https://www.greatfrontend.com
+    github: paulus-seo
+    linkedin: paulusseo
 
 slorber:
   name: Sébastien Lorber
@@ -17,7 +15,7 @@ slorber:
   image_url: https://github.com/slorber.png
   page:
     # customize the url of the author page at /blog/authors/<permalink>
-    permalink: '/all-sebastien-lorber-articles'
+    permalink: "/all-sebastien-lorber-articles"
   socials:
     x: sebastienlorber
     linkedin: sebastienlorber
