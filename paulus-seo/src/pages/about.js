@@ -19,14 +19,14 @@ const careerHistory = [
   },
   {
     group: 'Republic of Korea Army',
-    groupLogo: '/img/careers/roka__logo.png',
+    groupLogo: '/img/careers/roka_logo.png',
     title: '탄약소대장 (Ammunition Platoon Leader)',
     years: '2020.02 - 2021.06',
     logo: '/img/careers/roka_first_lieutenant.png',
   },
   {
     group: 'Republic of Korea Army',
-    groupLogo: '/img/careers/roka__logo.png',
+    groupLogo: '/img/careers/roka_logo.png',
     title: '탄약소대장 (Ammunition Platoon Leader)',
     years: '2019.03 - 2020.02',
     logo: '/img/careers/roka_second_lieutenant.png',
