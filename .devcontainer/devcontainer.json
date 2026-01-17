@@ -12,7 +12,7 @@
     "--network=host",
     "--ipc=host"
   ],
-  "postCreateCommand": "npm install",
+  "postCreateCommand": "npm install -g @google/gemini-cli && cd paulus-seo && npm install",
   "customizations": {
     "vscode": {
       "settings": {
