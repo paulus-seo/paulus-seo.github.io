@@ -1,0 +1,132 @@
+.timelineContainer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timelineGroup {
+  position: relative;
+  /* The left padding will be on the sub-items to align with the header */
+}
+
+.groupHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 80px; /* Space for the logo */
+  min-height: 64px;
+}
+
+.groupLogo {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 64px;
+  height: 64px;
+  background-color: var(--ifm-background-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid var(--ifm-color-primary);
+  overflow: hidden;
+  z-index: 2;
+}
+
+.groupLogo img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
+
+.groupHeader h2 {
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+.groupItems {
+  position: relative;
+  padding-top: 0.5rem; /* 간격 축소 */
+  padding-left: 80px; /* Align with groupHeader text */
+}
+
+.groupItems::before {
+  content: '';
+  position: absolute;
+  left: 32px; /* Center of the 64px logo */
+  top: -1.5rem; /* 시작점 조정하여 groupHeader에 더 가깝게 */
+  bottom: 0;
+  width: 3px;
+  background-color: var(--ifm-color-emphasis-300);
+  z-index: 1;
+}
+
+
+.groupItem {
+  position: relative;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center; /* 로고와 텍스트를 세로 중앙 정렬 */
+  gap: 1rem;
+  padding: 1rem; /* 카드의 안쪽으로 로고가 들어오므로, 카드 자체에 패딩을 줍니다 */
+  background: var(--ifm-card-background-color);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-global-shadow-lw);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* 트랜지션 추가 */
+}
+
+.groupItem:hover {
+  transform: translateY(-5px); /* 살짝 위로 이동 */
+  box-shadow: var(--ifm-global-shadow-md); /* 그림자 강조 */
+  cursor: pointer; /* 마우스 오버 시 포인터 변경 */
+}
+
+/* Connect the sub-item to the timeline bar */
+.groupItem::before {
+    content: '';
+    position: absolute;
+    left: -48px; /* 타임라인 세로선(left: 32px)과 itemLogo의 시작 지점(left: 0)을 연결 */
+    top: 50%; /* 로고의 중앙에 맞춤 */
+    transform: translateY(-50%);
+    width: 20px;
+    height: 3px;
+    background-color: var(--ifm-color-emphasis-300);
+    z-index: 1;
+}
+
+
+.itemLogo {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  background-color: var(--ifm-background-color);
+  border-radius: var(--ifm-border-radius);
+  z-index: 2; /* 카드 안으로 들어왔으니 Z-index는 1로 낮춰도 됨, 하지만 겹칠 일이 없으므로 유지 */
+}
+
+.itemLogo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: var(--ifm-border-radius);
+  border: none; /* 테두리 제거 */
+}
+
+.itemDetails {
+  flex-grow: 1;
+}
+
+.groupItem h4, .groupItem span {
+  margin: 0;
+}
+
+.groupItem h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.groupItem span {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+}
