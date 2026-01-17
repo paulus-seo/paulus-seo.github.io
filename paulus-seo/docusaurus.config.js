@@ -101,6 +101,11 @@ const config = {
             position: 'left',
           },
           {
+            to: '/awards',
+            label: 'Awards',
+            position: 'left',
+          },
+          {
             to: '/docs/intro', 
             label: 'Docs', 
             position: 'left'
