@@ -1,33 +1,67 @@
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Layout from '@theme/Layout';
+import styles from './awards.module.css';
 
 const awardsList = [
   {
-    title: 'ROBOKON 2020',
+    title: 'R-BIZ Challenge Turtlebot3 Autorace',
     description: (
       <>
-        First prize in the TurtleBot3 Auto Race category.
+        Second prize in the TurtleBot3 Autorace category at R-BIZ Challenge 2018.
       </>
     ),
-    imageUrl: '/img/awards/Turtlebot3_Autorace1.png',
-  },
-  {
-    title: 'ROBOKON 2019',
-    description: (
-      <>
-        Second prize in the TurtleBot3 Auto Race category.
-      </>
-    ),
-    imageUrl: '/img/awards/Turtlebot3_Autorace2.png',
+    imageUrls: ['/img/awards/Turtlebot3_Autorace1.png', '/img/awards/Turtlebot3_Autorace2.png'],
   },
 ];
 
-function Award({title, description, imageUrl}) {
+function Award({title, description, imageUrls}) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const hasMultipleImages = imageUrls.length > 1;
+
+  const goToNext = useCallback(() => {
+    setCurrentImageIndex(prevIndex =>
+      prevIndex === imageUrls.length - 1 ? 0 : prevIndex + 1
+    );
+  }, [imageUrls.length]);
+
+  const goToPrevious = () => {
+    setCurrentImageIndex(prevIndex =>
+      prevIndex === 0 ? imageUrls.length - 1 : prevIndex - 1
+    );
+  };
+
+  useEffect(() => {
+    if (hasMultipleImages) {
+      const timer = setTimeout(() => {
+        goToNext();
+      }, 3000); // Change image every 3 seconds
+
+      return () => clearTimeout(timer); // Cleanup the timer
+    }
+  }, [currentImageIndex, hasMultipleImages, goToNext]);
+
+
   return (
     <div className={'col col--6 margin-bottom--lg'}>
       <div className="card">
-        <div className="card__image">
-          <img src={imageUrl} alt={title} />
+        <div className={`card__image ${styles.cardImageContainer}`}>
+          <img src={imageUrls[currentImageIndex]} alt={`${title} - image ${currentImageIndex + 1}`} />
+          {hasMultipleImages && (
+            <>
+              <button onClick={goToPrevious} className={`${styles.navButton} ${styles.prevButton}`}>&#10094;</button>
+              <button onClick={goToNext} className={`${styles.navButton} ${styles.nextButton}`}>&#10095;</button>
+              <div className={styles.dotsContainer}>
+                {imageUrls.map((_, idx) => (
+                  <span
+                    key={idx}
+                    className={`${styles.dot} ${currentImageIndex === idx ? styles.activeDot : ''}`}
+                    onClick={() => setCurrentImageIndex(idx)}
+                  ></span>
+                ))}
+              </div>
+            </>
+          )}
         </div>
         <div className="card__body">
           <h3>{title}</h3>
