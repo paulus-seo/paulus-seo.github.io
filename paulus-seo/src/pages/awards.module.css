@@ -1,0 +1,76 @@
+.cardImageContainer {
+  position: relative;
+  min-height: 200px; /* Consistent height for the image area */
+  display: flex; /* For centering content */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  overflow: hidden; /* Hide parts of image if it overflows, although object-fit should prevent this */
+}
+
+.cardImageContainer img {
+  max-width: 100%; /* Ensure image doesn't overflow its container */
+  max-height: 200px; /* Ensure image doesn't exceed the container's height */
+  object-fit: contain; /* Maintain aspect ratio and fit inside */
+  border-radius: 8px; /* Added for softer appearance */
+}
+
+.cardImageContainer:hover .navButton {
+  opacity: 1; /* Visible on hover */
+}
+
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  z-index: 10;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease, background-color 0.3s;
+  opacity: 0; /* Initially hidden */
+}
+
+.navButton:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prevButton {
+  left: 10px;
+}
+
+.nextButton {
+  right: 10px;
+}
+
+.dotsContainer {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.activeDot,
+.dot:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
