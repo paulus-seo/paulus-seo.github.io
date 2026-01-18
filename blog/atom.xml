@@ -2,11 +2,45 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://paulus-seo.github.io/blog</id>
     <title>Paul's Dev Blog Blog</title>
-    <updated>2026-01-17T00:00:00.000Z</updated>
+    <updated>2026-01-18T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://paulus-seo.github.io/blog"/>
     <subtitle>Paul's Dev Blog Blog</subtitle>
     <icon>https://paulus-seo.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[웹사이트 기능 개선 기록 (2)]]></title>
+        <id>https://paulus-seo.github.io/blog/website-improvements-part-2</id>
+        <link href="https://paulus-seo.github.io/blog/website-improvements-part-2"/>
+        <updated>2026-01-18T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[안녕하세요! 어제에 이어 오늘도 웹사이트 사용성 개선을 위해 몇 가지 업데이트를 진행했습니다.]]></summary>
+        <content type="html"><![CDATA[<p>안녕하세요! 어제에 이어 오늘도 웹사이트 사용성 개선을 위해 몇 가지 업데이트를 진행했습니다.
+이번 업데이트는 주로 방문자 경험(UX)과 인터페이스(UI)를 개선하는 데 초점을 맞췄습니다.</p>
+<p><strong>주요 개선 내용:</strong></p>
+<ol>
+<li>
+<p><strong>포트폴리오 드롭다운 메뉴 적용</strong>:
+상단 네비게이션의 <code>About</code>, <code>Projects</code>, <code>Awards</code> 링크를 <code>Portfolio</code>라는 하나의 드롭다운 메뉴로 통합했습니다. 이를 통해 네비게이션 바가 더 깔끔해졌고, 관련 페이지들을 논리적으로 그룹화하여 접근성을 높였습니다.</p>
+</li>
+<li>
+<p><strong>프로젝트 페이지 카드 디자인 개선</strong>:
+<code>Projects</code> 페이지의 카드 레이아웃과 이미지 표시 방식을 대폭 개선하여 시각적 일관성과 안정감을 주었습니다.</p>
+<ul>
+<li><strong>일관된 카드 비율</strong>: 각 프로젝트 카드의 이미지 영역과 하단의 제목/설명 영역이 항상 동일한 비율을 유지하도록 수정했습니다. 이제 이미지 크기에 따라 카드 전체 구조가 흔들리지 않습니다.</li>
+<li><strong>이미지 스타일링 개선</strong>: 이미지가 잘리지 않고 원본 가로세로 비율을 유지하면서, 카드 영역 내에서 중앙에 위치하도록 변경했습니다. 이로 인해 크기가 작은 이미지도 어색함 없이 자연스럽게 보입니다.</li>
+</ul>
+</li>
+</ol>
+<p>이번 개선 작업들을 통해 웹사이트를 둘러보는 경험이 더 쾌적해졌기를 바랍니다. 앞으로도 사용성과 디자인을 꾸준히 다듬어 나가겠습니다.</p>
+<p>감사합니다!</p>]]></content>
+        <author>
+            <name>Paul Seo</name>
+            <uri>http://linkedin.com/in/paulusseo/</uri>
+        </author>
+        <category label="Docusaurus" term="Docusaurus"/>
+        <category label="web-dev" term="web-dev"/>
+        <category label="ux" term="ux"/>
+        <category label="ui" term="ui"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[웹사이트 리뉴얼 작업 기록]]></title>
         <id>https://paulus-seo.github.io/blog/website-renewal</id>

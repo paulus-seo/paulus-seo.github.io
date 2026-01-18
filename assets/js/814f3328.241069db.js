@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpaulus_seo=self.webpackChunkpaulus_seo||[]).push([[472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"\uc6f9\uc0ac\uc774\ud2b8 \ub9ac\ub274\uc5bc \uc791\uc5c5 \uae30\ub85d","permalink":"/blog/website-renewal","unlisted":false,"date":"2026-01-17T00:00:00.000Z"}]}')}}]);
