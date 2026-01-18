@@ -82,7 +82,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/paulus-seo-social-card.jpg',
       navbar: {
         title: 'Paulus-Seo',
         logo: {
@@ -91,19 +91,23 @@ const config = {
         },
         items: [
           {
-            to: '/about',
-            label: 'About',
+            type: 'dropdown',
+            label: 'Portfolio',
             position: 'left',
-          },
-          {
-            to: '/projects',
-            label: 'Projects',
-            position: 'left',
-          },
-          {
-            to: '/awards',
-            label: 'Awards',
-            position: 'left',
+            items: [
+              {
+                to: '/about',
+                label: 'About',
+              },
+              {
+                to: '/projects',
+                label: 'Projects',
+              },
+              {
+                to: '/awards',
+                label: 'Awards',
+              },
+            ],
           },
           {
             to: '/docs/intro', 
