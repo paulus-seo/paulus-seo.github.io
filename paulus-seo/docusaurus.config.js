@@ -91,19 +91,23 @@ const config = {
         },
         items: [
           {
-            to: '/about',
-            label: 'About',
+            type: 'dropdown',
+            label: 'Portfolio',
             position: 'left',
-          },
-          {
-            to: '/projects',
-            label: 'Projects',
-            position: 'left',
-          },
-          {
-            to: '/awards',
-            label: 'Awards',
-            position: 'left',
+            items: [
+              {
+                to: '/about',
+                label: 'About',
+              },
+              {
+                to: '/projects',
+                label: 'Projects',
+              },
+              {
+                to: '/awards',
+                label: 'Awards',
+              },
+            ],
           },
           {
             to: '/docs/intro', 
